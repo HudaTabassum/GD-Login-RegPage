@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GD Login With OTP</title>
+    <link rel="stylesheet" href="registration.css">
+    
+</head>
+<body>
+<div id="wrapper">
+
+  <div id="main-section" class="clearfix">
+
+    <div id="section1">
+        <div id="left-text">
+            <h2>Almost done ...</h2>
+            <img src="building.jpg" class="otp-image" alt="image1">
+            <p id="otp-p1">We Are Working For The Dance And Sing Songs. This Video is Very Awesome For The Youngster.</p>
+            <p id="otp-p2">Please Vote This Video And Like Our Channel We Are Working For The Dance And Sing Songs.This Video is Very Awesome For The Youngster.</p>
+        </div>    
+    </div>
+
+    <div id="section2">
+        <div id="right-text">
+            <h3 id="S1">Global Diary</h3>
+            <h4 id="S2">stay updated on this world</h4>
+            
+            <h1 id="send-code">We Send the Code To Your Mobile Number</h1>
+            <p id="send-code2">Enter 6-digits Verification code sent to</p>
+            <p class="display-num">********** &nbsp;  <a href="" id="change"><b>Change</b></a></p>
+        <!-- <div class="six-digits"> -->
+            <form id="regForm">
+            <input type="text" class="digit1" maxlength="1" required></input>
+            <input type="text" class="digit2" maxlength="1" required></input>
+            <input type="text" class="digit3" maxlength="1" required> </input>
+            <input type="text" class="digit4" maxlength="1" required></input>
+            <input type="text" class="digit5" maxlength="1" required></input>
+            <input type="text" class="digit6" maxlength="1" required></input>
+            <center>
+                <p class="cpassvalidation-message" style="color: red; font-size: 11px;"></p>
+            </center>
+        <!-- </div> -->
+            <button id="btn-signup">GET STARTED</button><br>
+            <P id="resend-text">Didn't Get Code ? <a  class="register"href="#"><b>Resend</b></a></P>
+            
+          </form>
+
+            <p class="note"><b style="color: black;">Note: </b>if you don't see the email in your inbox. check in your spam folder</p>
+        
+
+        </div>
+    </div>
+
+  </div>
+    
+</div> 
+<script type="text/javascript" src="registration.js"></script>
+<!-- <script>
+var emailInput = document.querySelector('#email');
+  var validationMessage = document.querySelector('.validation-message');
+  var loginForm = document.querySelector('#loginForm');
+
+  emailInput.addEventListener('blur', function () {
+      if (!/^\d{10}$/.test(emailInput.value) && !/^[A-Za-z0-9._%+-]+@gmail\.com$/.test(emailInput.value)) {
+          validationMessage.textContent = 'Please enter a valid 10-digit phone number or a Gmail address.';
+          emailInput.value = '';
+          emailInput.focus();
+      } else {
+          validationMessage.textContent = '';
+      }
+  });
+
+</script> -->
+</body>
+</html>
+
+<!-- <center>
+    <form name="regform" onsubmit="func()">
+     
+     <input type="password" placeholder="password" id="pass">
+     <input type="password" placeholder="cpassword" id="pass1">
+     <input type="submit" value="button">
+    </form> 
+
+    var passwordInput = document.querySelector('#pass');
+var cpasswordInput = document.querySelector('#pass1');
+</center> -->

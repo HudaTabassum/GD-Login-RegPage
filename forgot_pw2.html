@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GD Forget Password</title>
+    <link rel="stylesheet" href="registration.css">
+    
+</head>
+<body>
+<div id="wrapper">
+
+  <div id="main-section" class="clearfix">
+
+    <div id="section1">
+        <div id="left-text">
+            <h2>Welcome,</h2>
+            <p id="para">an easier, more powerful way to support your customer simple to start, powerful at scale, and proven to build.</p>
+            <img src="building.jpg" class="reg-image" alt="image1">
+
+        </div>    
+    </div>
+
+    <div id="section2">
+        <div id="right-text">
+            <h3 id="S1">Global Diary</h3>
+            <h4 id="S2">stay updated on this world</h4>
+            
+            <h1 id="create-pw">Create New Password</h1>
+            <p id="enter-new">Enter New Password</p>
+
+            <form id="regForm">
+            
+            <input type="password" placeholder="New Password" id="pass"></input></br>
+            
+                <p class="passvalidation-message" style="color: red; font-size: 11px; margin-bottom: 10px; margin-left: 140px;"></p>
+            
+            <input type="password" placeholder="Confirm Password" id="pass1" required></input></br>
+            
+                <p class="cpassvalidation-message" style="color: red; font-size: 11px; margin-bottom: 10px; margin-left: 140px;"></p>
+            
+            <button id="btn-signup">RESET PASSWORD</button><br>
+
+          </form>
+          <P id="back-to">Back To ? <a  class="register" href="login.html"><b>Sign In</b></a></P>
+
+        </div>
+    </div>
+
+  </div>
+    
+</div> 
+<!-- <script type="text/javascript" src="registration.js"></script> -->
+<script>
+   
+var passwordInput = document.querySelector("#pass");
+var cpasswordInput = document.querySelector("#pass1");
+var validationMessage = document.querySelector(".validation-message");
+var passvalidationMessage = document.querySelector(".passvalidation-message");
+var cpassvalidationMessage = document.querySelector(".cpassvalidation-message");
+var submitButton = document.querySelector("#btn-signup");
+var regForm = document.querySelector("#regForm");
+
+
+passwordInput.addEventListener("blur", function () {
+  if (
+    !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+      passwordInput.value
+    )
+  ) {
+    submitButton.disabled = true;
+    passvalidationMessage.textContent = "Please enter a correct password";
+    passwordInput.value = "";
+    passwordInput.focus();
+  } else {
+    submitButton.disabled = false;
+    passvalidationMessage.textContent = "";
+  }
+});
+
+cpasswordInput.addEventListener("blur", function () {
+  
+  if (passwordInput.value != cpasswordInput.value) {
+    submitButton.disabled = true;
+    
+
+    cpassvalidationMessage.textContent =
+      "confirm password does not match password";
+    cpasswordInput.value = "";
+    cpasswordInput.focus();
+  } else {
+    submitButton.disabled = false;
+    cpassvalidationMessage.textContent = "";
+  }
+});
+
+
+</script>
+
+</body>
+</html>
+
